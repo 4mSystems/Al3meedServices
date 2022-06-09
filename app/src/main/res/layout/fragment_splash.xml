@@ -6,7 +6,7 @@
 
     <variable
       name="viewModel"
-      type="app.te.lima_zola.presentation.splash.SplashViewModel" />
+      type="app.te.alameed.presentation.splash.SplashViewModel" />
   </data>
 
   <RelativeLayout
@@ -18,7 +18,7 @@
       android:layout_height="@dimen/_120sdp"
       android:layout_centerInParent="true"
       android:src="@drawable/logo"
-      android:visibility="@{viewModel.logoVisibility}" />
+     />
 
     <androidx.appcompat.widget.AppCompatImageView
       android:layout_width="@dimen/_120sdp"

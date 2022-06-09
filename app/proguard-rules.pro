@@ -36,20 +36,20 @@
 -keepattributes Signature
 # Retain declared checked exceptions for use by a Proxy instance.
 -keepattributes Exceptions
-
-## Bottom Navigation
--keep public class com.google.android.material.bottomnavigation.* { *; }
+# GSON
+-keep,allowobfuscation,allowshrinking class com.google.gson.reflect.TypeToken { *; }
+-keep,allowobfuscation,allowshrinking class * extends com.google.gson.reflect.TypeToken
 
 # To prevent obfusticating model classes
-# TODO : Make sure you do this for each feature module in your app
--keep class com.structure.base_mvvm.data.* { *; }
--keep class com.structure.base_mvvm.domain.* { *; }
+-keep class app.te.alameed.domain.account.entity.request.* { *; }
+-keep class app.te.alameed.domain.brand_models.entity.search.* { *; }
+-keep class app.te.alameed.domain.brand_models.entity.* { *; }
+-keep class app.te.alameed.domain.general.paginate.* { *; }
+-keep class app.te.alameed.domain.home.models.* { *; }
 
 ## Localization Helper
 -keep class com.zeugmasolutions.localehelper.* { *; }
 
-## Country Code Picker
--keep class com.rilixtech.widget.countrycodepicker.* { *; }
 ## Keep proto data store
 -keep class androidx.datastore.*.** {*;}
 -keepclassmembers class * extends com.google.protobuf.GeneratedMessageLite* {

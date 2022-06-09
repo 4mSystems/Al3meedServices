@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
   xmlns:tools="http://schemas.android.com/tools"
-  package="app.te.lima_zola">
+  package="app.te.alameed">
 
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
   <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -9,8 +9,10 @@
   <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
   <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
-  <application
-    android:name="app.te.lima_zola.core.MyApplication"
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+    android:name="app.te.alameed.core.MyApplication"
     android:allowBackup="false"
     android:icon="${appIcon}"
     android:label="@string/app_name"
@@ -22,19 +24,10 @@
     android:theme="@style/Theme.AppTheme"
     tools:replace="android:allowBackup"
     tools:targetApi="n">
-    <!--    android:theme="@style/Theme.App.Starting"-->
-
-    <!-- Start Google Services -->
-<!--    <meta-data-->
-<!--      android:name="com.google.android.geo.API_KEY"-->
-<!--      android:value="${MAPS_API_KEY}" />-->
-
-    <!-- End Google Services -->
-
 
     <meta-data
       android:name="com.google.firebase.messaging.default_notification_icon"
-      android:resource="@mipmap/ic_launcher_release" />
+      android:resource="@mipmap/ic_launcher" />
     <meta-data
       android:name="com.google.firebase.messaging.default_notification_color"
       android:resource="@color/colorPrimary" />
@@ -64,7 +57,7 @@
     </activity>
 
     <activity
-      android:name="app.te.lima_zola.presentation.auth.AuthActivity"
+      android:name="app.te.alameed.presentation.home.HomeActivity"
       android:configChanges="orientation|screenSize"
       android:exported="true"
       android:screenOrientation="portrait"
@@ -76,19 +69,9 @@
         <category android:name="android.intent.category.LAUNCHER" />
       </intent-filter>
     </activity>
-    <activity
-      android:name="app.te.lima_zola.presentation.home.HomeActivity"
-      android:configChanges="orientation|screenSize"
-      android:screenOrientation="portrait"
-      android:theme="@style/Theme.AppTheme"
-      android:windowSoftInputMode="adjustResize|stateHidden" />
 
-    <!-- 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  github key -->
-    <!--protien.chef2022@gmail.com
-       Pprotien_chef2022
-    -->
     <service
-      android:name="app.te.lima_zola.core.MyFirebaseMessagingService"
+      android:name="app.te.alameed.core.MyFirebaseMessagingService"
       android:exported="false">
       <intent-filter>
         <action android:name="com.google.firebase.MESSAGING_EVENT" />

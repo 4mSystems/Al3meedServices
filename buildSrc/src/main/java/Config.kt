@@ -1,11 +1,13 @@
 object Config {
   object AppConfig {
-    const val appId = "app.te.lima_zola"
+    const val appId = "app.te.alameed"
     const val compileSdkVersion = 32
     const val minSdkVersion = 23
-    const val versionCode = 2
+    const val versionCode = 1
+    const val versionCodeHeader = 1
     const val versionName = "1"
     const val testRunner = "androidx.test.runner.AndroidJUnitRunner"
+    const val cmakePath = "jni/CMakeLists.txt"
   }
 
   object Dependencies {
@@ -46,7 +48,7 @@ object Config {
     const val roomDb = "\"protein_db\""
     const val server_client_id =
       "\"654641907466-q9fljq7lumaci6cf0nilsp3d03m23osq.apps.googleusercontent.com\""
-    const val debugBaseUrl = "\"http://lima.tesolutionspro.com/api/\""
-    const val releaseBaseUrl = "\"http://lima.tesolutionspro.com/api/\""
+    const val debugBaseUrl = "\"http://el3med.com/api/\""
+    const val releaseBaseUrl = "\"http://el3med.com/api/\""
   }
 }

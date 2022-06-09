@@ -1,49 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <data>
+    <data>
 
-    <variable
-      name="eventListener"
-      type="app.te.lima_zola.presentation.home.eventListener.HomeEventListener" />
+        <variable
+            name="eventListener"
+            type="app.te.alameed.presentation.home.eventListener.HomeEventListener" />
 
-    <variable
-      name="uiState"
-      type="app.te.lima_zola.presentation.home.ui_state.CategoriesUiItemState" />
+        <variable
+            name="itemModel"
+            type="app.te.alameed.presentation.home.ui_state.SearchItemUiState" />
+    </data>
 
-  </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="4dp">
 
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
-  <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="@dimen/_4sdp"
-    android:onClick="@{()-> eventListener.openVideos(uiState.id,uiState.contentType)}">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/brand_image"
+                style="@style/ShapeAppearanceOverlay.App.CornerSize10Percent"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_180sdp"
+                android:layout_margin="@dimen/_4sdp"
+                android:src="@drawable/logo"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:loadImage="@{itemModel.itemSearch.image}"
+                app:openFullScreen="@{itemModel.itemSearch.image}" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-      android:id="@+id/cat_image"
-      android:layout_width="@dimen/_100sdp"
-      android:layout_height="@dimen/_100sdp"
-      android:scaleType="centerCrop"
-      android:src="@color/overlayBackground"
-      app:layout_constraintEnd_toEndOf="parent"
-      app:layout_constraintStart_toStartOf="parent"
-      app:layout_constraintTop_toTopOf="parent"
-      app:loadImage="@{uiState.categoryImage()}" />
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="@{itemModel.itemSearch.name}"
+                android:textAlignment="viewStart"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toStartOf="@+id/brand_name"
+                app:layout_constraintStart_toEndOf="@id/brand_image"
+                app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatTextView
-      style="@style/TextMediumFont"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_margin="@dimen/_3sdp"
-      android:text="@{uiState.categoryName()}"
-      android:textAlignment="center"
-      android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-      android:textColor="@color/black"
-      app:layout_constraintBottom_toBottomOf="parent"
-      app:layout_constraintEnd_toEndOf="@id/cat_image"
-      app:layout_constraintStart_toStartOf="@+id/cat_image"
-      app:layout_constraintTop_toBottomOf="@id/cat_image" />
-  </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/brand_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="@{itemModel.itemSearch.brand.name}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_8ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/product_desc"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_margin="@dimen/_4sdp"
+                android:text="@{itemModel.itemSearch.description}"
+                android:textAlignment="viewStart"
+                android:textColor="@color/darkGray"
+                android:textSize="@dimen/_10ssp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/brand_image"
+                app:layout_constraintTop_toBottomOf="@+id/product_name" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
 </layout>

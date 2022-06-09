@@ -29,8 +29,8 @@ object Versions {
   // Networking
   const val retrofit = "2.9.0"
   const val gson = "2.8.8"
-  const val interceptor = "4.8.1"
-  const val chuckLogging = "1.1.0"
+  const val interceptor = "4.9.3"
+  const val chuckLogging = "3.5.2"
 
   // UI
   const val materialDesign = "1.7.0-alpha01"
@@ -40,7 +40,8 @@ object Versions {
   const val coil = "1.4.0"
   const val ssp = "1.0.6"
   const val shimmer = "0.5.0"
-  const val exoplayer = "2.17.1"
+  const val exoplayer = "2.15.1"
+  const val chrisbanes = "2.3.0"
 
   // Utils
   const val playServices = "19.2.0"

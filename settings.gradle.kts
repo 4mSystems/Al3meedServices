@@ -1,4 +1,4 @@
-rootProject.name = "Lima"
+rootProject.name = "Alameed"
 
 // Include all the existent modules in the project
 rootDir

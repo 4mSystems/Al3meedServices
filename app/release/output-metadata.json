@@ -4,14 +4,14 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "app.te.protein_chef",
+  "applicationId": "app.te.alameed",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 2,
+      "versionCode": 1,
       "versionName": "1",
       "outputFile": "app-release.apk"
     }
