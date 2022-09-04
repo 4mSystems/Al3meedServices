@@ -1,7 +1,6 @@
 package app.te.alameed.presentation.home.adapters
 
 import android.content.Context
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import app.te.alameed.R
 import app.te.alameed.presentation.home.ui_state.MainSearchUiState
 
-class SearchAdapter() :
+class SearchAdapter :
     PagingDataAdapter<MainSearchUiState, SearchAdapter.ViewHolder>(differCallback) {
     lateinit var context: Context
 
@@ -21,10 +20,6 @@ class SearchAdapter() :
                 oldItem: MainSearchUiState,
                 newItem: MainSearchUiState
             ): Boolean {
-                Log.e(
-                    "areItemsTheSame",
-                    "areItemsTheSame: ${oldItem.toString() == newItem.toString()}"
-                )
                 return oldItem.toString() == newItem.toString()
             }
 
@@ -32,10 +27,6 @@ class SearchAdapter() :
                 oldItem: MainSearchUiState,
                 newItem: MainSearchUiState
             ): Boolean {
-                Log.e(
-                    "areContentsTheSame",
-                    "areContentsTheSame: ${oldItem.toString() == newItem.toString()}",
-                )
                 return oldItem.toString() == newItem.toString()
             }
         }

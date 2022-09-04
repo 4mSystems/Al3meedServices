@@ -5,5 +5,6 @@ data class BrandModels(
     val image: String,
     val name: String,
     val description: String,
-    val brand: BrandModels
+    val brand: BrandModels,
+    val size: ModelSize
 )

@@ -1,17 +1,13 @@
 package app.te.alameed.presentation.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.widget.Toast
-import androidx.core.view.isVisible
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.lifecycle.repeatOnLifecycle
 import androidx.paging.LoadState
 import androidx.paging.PagingData
-import app.te.alameed.BR
 import app.te.alameed.R
 import app.te.alameed.databinding.FragmentHomeBinding
 import app.te.alameed.presentation.base.BaseFragment
@@ -24,7 +20,6 @@ import app.te.alameed.presentation.home.viewModels.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-
 
 @AndroidEntryPoint
 class HomeFragment : BaseFragment<FragmentHomeBinding>(), HomeEventListener {

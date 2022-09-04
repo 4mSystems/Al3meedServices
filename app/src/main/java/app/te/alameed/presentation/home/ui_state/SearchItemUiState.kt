@@ -22,5 +22,10 @@ class SearchItemUiState(val itemSearch: BrandModels) : BaseUiState(), MainSearch
     }
 
     override fun getId(): Int = itemSearch.id
+    fun getCm(context: Context): String =
+        context.getString(R.string.cm).plus(" ${itemSearch.size.cm}")
+
+    fun getInch(context: Context): String =
+        context.getString(R.string.inch).plus(" ${itemSearch.size.inch}")
 
 }

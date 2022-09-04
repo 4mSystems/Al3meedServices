@@ -37,5 +37,7 @@
     <string name="brand_required">اختر البراند اولا</string>
     <string name="result_not_loading">لا يمكن تحميل المزيد من المعلومات</string>
     <string name="no_content_avail">لا توجد بيانات مطابقه</string>
+    <string name="cm">"Cm : "</string>
+  <string name="inch">Inch :</string>
 
 </resources>
